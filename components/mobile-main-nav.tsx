@@ -54,7 +54,7 @@ const MobileMainNav: React.FC<MainNavProps> = ({ data }) => {
           <div className="flex items-center px-[1.1rem]">
             <IconButton icon={<X size={15} />} onClick={onClose} />
           </div>
-          <div className="mr-3 sm:mr-6  flex h-full max-h-[60vh] flex-col items-end justify-evenly p-6">
+          <div className="mr-1 sm:mr-3  flex h-full max-h-[40vh] flex-col items-end justify-evenly p-6">
             {routes.map((route) => (
               <div
                 key={route.href + "mobile"}
@@ -63,15 +63,15 @@ const MobileMainNav: React.FC<MainNavProps> = ({ data }) => {
                 <Link
                   href={route.href}
                   className={cn(
-                    "text-lg font-medium transition-colors hover:text-black dark:text-slate-300 dark:hover:font-bold dark:hover:text-white",
+                    "text-lg font-medium transition-colors hover:text-black dark:text-neutral-100 dark:hover:font-bold dark:hover:text-white",
                     route.active
                       ? "text-black dark:text-white"
-                      : "text-neutral-500 dark:text-slate-400",
+                      : "text-neutral-500 dark:text-neutral-100",
                   )}
                 >
                   {route.label}
                 </Link>
-                <hr className="mr-3 mt-2 w-full" />
+                <hr className="mt-1 w-full" />
               </div>
             ))}
           </div>

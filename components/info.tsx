@@ -32,7 +32,7 @@ const Info: React.FC<InfoProps> = ({ data }) => {
       <div className="flex flex-col gap-y-6">
         <div className="flex items-center gap-x-4">
           <h3 className="font-semibold text-black dark:text-neutral-200">
-            Marca:
+            Categoria:
           </h3>
           <div className="dark:text-neutral-200">{data?.size?.value}</div>
         </div>

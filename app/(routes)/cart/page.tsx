@@ -28,7 +28,7 @@ const CartPage = () => {
         <div className="px-4 py-16 pt-3 sm:px-6 lg:px-8">
           <div className="flex flex-col-reverse items-center justify-center py-2 sm:flex-row sm:items-end sm:justify-between ">
             <h1 className="pt-5 text-3xl font-bold text-black dark:text-white">
-              Shopping Cart
+              Carro de compras
             </h1>
           </div>
           <div className="mt-12 gap-x-12 lg:grid lg:grid-cols-12 lg:items-start">
