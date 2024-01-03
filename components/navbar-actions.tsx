@@ -1,21 +1,17 @@
 "use client";
 
-import { ShoppingCart } from "lucide-react";
-import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-
-import Button from "@/components/ui/button";
-import useCart from "@/hooks/use-cart";
+import { BsMoon, BsSun } from "react-icons/bs";
+import { useTheme } from "@/providers/theme-context";
 
 const NavbarActions = () => {
+  const { theme, toggleTheme } = useTheme();
+
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
     setIsMounted(true);
   }, []);
-
-  const router = useRouter();
-  const cart = useCart();
 
   if (!isMounted) {
     return null;
@@ -23,15 +19,16 @@ const NavbarActions = () => {
 
   return (
     <div className="flex items-center gap-x-4 lg:ml-auto">
-      <Button
-        onClick={() => router.push("/cart")}
-        className="flex items-center rounded-full bg-black px-4 py-2 dark:bg-zinc-800"
+      <button
+        className="flex h-[2.5rem] w-[2.5rem] items-center justify-center rounded-full border-[2px] border-black border-opacity-40 bg-black text-white antialiased shadow-2xl backdrop-blur-[0.5rem] transition-all hover:scale-[1.15] active:scale-105 dark:bg-white"
+        onClick={toggleTheme}
       >
-        <ShoppingCart size={20} color="white" />
-        <span className="ml-2 text-sm font-medium text-white">
-          {cart.items.length}
-        </span>
-      </Button>
+        {theme === "light" ? (
+          <BsMoon className="rounded-full bg-black text-xl font-bold text-white" />
+        ) : (
+          <BsSun className="text-xl dark:bg-white dark:text-black" />
+        )}
+      </button>
     </div>
   );
 };
