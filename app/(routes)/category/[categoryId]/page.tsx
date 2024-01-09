@@ -54,8 +54,7 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({
       colors.push({...product.color as FilterProps});
     }
   }
-  console.log(sizes)
-  console.log(colors)
+
   const category = await getCategory(params.categoryId);
 
   return (
@@ -66,7 +65,7 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({
           <div className="mt-8 h-full lg:grid lg:grid-cols-5 lg:gap-x-8">
             <MobileFilters sizes={sizes} colors={colors} />
             <div className="hidden lg:block">
-              <Filter valueKey="sizeId" name="Marca" data={sizes} />
+              <Filter valueKey="sizeId" name="Producto" data={sizes} />
               <Filter valueKey="colorId" name="Color" data={colors} />
             </div>
             <div className="mt-6 lg:col-span-4 lg:mt-0">
