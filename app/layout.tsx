@@ -16,7 +16,6 @@ export const metadata = {
   description: "Comprá en comodas cuotas (solo para la zona de Tandil)",
 };
 
-/* whatsapp: http://wa.me/+5492494280688 */
 
 export default function RootLayout({
   children,

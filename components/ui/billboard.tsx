@@ -36,6 +36,7 @@ const Billboard: React.FC<BillboardProps> = ({ data }) => {
         navigation
         pagination={{ type: "bullets" }}
         modules={[Navigation, Pagination, Autoplay]}
+        loop={false}
         autoplay
       >
         {images.map((banner) => (
@@ -43,10 +44,10 @@ const Billboard: React.FC<BillboardProps> = ({ data }) => {
             <>
               <Image
                 src={banner.img}
-                alt="Belli Deportes banners"
+                alt="Multicuotas banner"
                 width={1620}
                 height={800}
-                className="relative bg-cover aspect-[2.4/1]"
+                className="relative bg-cover aspect-[3.2/1]"
                 {...banner.props}
               />
             </>

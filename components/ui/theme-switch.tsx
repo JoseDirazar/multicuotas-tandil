@@ -25,7 +25,7 @@ export default function ThemeSwitch() {
   return (
     <>
       <Link
-        href="https://wa.me/+5492494280688"
+        href="https://wa.me/+5492494518534"
         target="_blank"
         className="fixed bottom-[90px] right-[1.2rem] flex h-[3.5rem] w-[3.5rem] items-center justify-center rounded-full sm:hover:scale-[1.15] active:scale-110 border-[2px] border-[#35B721] border-opacity-90 bg-green-800"
       >
