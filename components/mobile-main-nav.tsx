@@ -37,28 +37,28 @@ const MobileMainNav: React.FC<MainNavProps> = ({ data }) => {
     <>
       <Button
         onClick={onOpen}
-        className="bg-white p-0 text-black dark:bg-black dark:text-white lg:hidden"
+        className="bg-transparent p-0 text-black dark:text-white lg:hidden"
       >
         <Menu size={20} />
       </Button>
       <Dialog
         open={open}
         as="div"
-        className="absolute top-0 z-30 h-[100vh] w-[50%] sm:w-[40%] lg:hidden"
+        className="absolute top-0 z-30 h-[100vh] w-[70%] sm:w-[40%] lg:hidden"
         onClose={onClose}
       >
-        <div className=" fixed inset-0 bg-black/10 backdrop-blur-[2px]" />
+        <div className="fixed inset-0 bg-black/10 backdrop-blur-[2px]" />
 
-        <Dialog.Panel className="relative mr-auto flex h-full w-full max-w-md flex-col overflow-y-auto bg-white/70 backdrop-blur-lg py-4 pb-6 shadow-xl dark:bg-transparent/70">
+        <Dialog.Panel className="relative mr-auto flex h-full w-full max-w-[100%] flex-col overflow-y-auto bg-white/70 py-4 pb-6 shadow-xl backdrop-blur-lg dark:bg-transparent/70">
           {/* Close button */}
           <div className="flex items-center px-[1.1rem]">
             <IconButton icon={<X size={15} />} onClick={onClose} />
           </div>
-          <div className="mr-1 sm:mr-3  flex h-full max-h-[40vh] flex-col items-end justify-evenly p-6">
+          <div className="mr-1 flex  h-full max-h-[40vh] flex-col items-end justify-evenly p-6 sm:mr-3">
             {routes.map((route) => (
               <div
                 key={route.href + "mobile"}
-                className="mr-0 sm:mr-3 flex min-w-[40%] flex-col items-end hover:scale-[1.15]"
+                className="mr-0 flex min-w-[70%] flex-col items-end hover:scale-[1.15] sm:mr-3"
               >
                 <Link
                   href={route.href}
@@ -66,12 +66,12 @@ const MobileMainNav: React.FC<MainNavProps> = ({ data }) => {
                     "text-lg font-medium transition-colors hover:text-black dark:text-neutral-100 dark:hover:font-bold dark:hover:text-white",
                     route.active
                       ? "text-black dark:text-white"
-                      : "text-neutral-500 dark:text-neutral-100",
+                      : "text-black dark:text-neutral-100",
                   )}
                 >
                   {route.label}
                 </Link>
-                <hr className="mt-1 w-full" />
+                <hr className="mt-9 w-full border-black dark:border-white" />
               </div>
             ))}
           </div>

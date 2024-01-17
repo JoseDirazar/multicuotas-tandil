@@ -13,7 +13,7 @@ const Navbar = async () => {
   const categories = await getCategories();
 
   return (
-    <div className="border-b dark:border-neutral-700 bg-white/30 dark:bg-black/50">
+    <div className="border-b dark:border-neutral-700 bg-white/30 dark:bg-black/30">
       <Container>
         <div className="flex h-16 items-center  justify-between px-4 sm:px-6 lg:relative lg:px-8">
           <MobileMainNav data={categories} />
