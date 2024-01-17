@@ -19,11 +19,11 @@ const Navbar = async () => {
           <MobileMainNav data={categories} />
           <Link href="/" className="gap-x-2 lg:ml-0">
             <div
-              className={`${font.className} ml-10 flex p-2 px-4 pl-0 text-xl font-bold dark:text-white lg:ml-0`}
+              className={`${font.className} ml-10 flex p-2 px-4 pl-0 text-xl dark:text-white lg:ml-0`}
             >
-              <p className="text-rose-500">MULTI</p>
-              <p className="text-blue-400">CUOTAS</p>
-              <p className="ml-2 text-yellow-500"> Tandíl</p>
+              <p className="text-rose-500 font-bold">MULTI</p>
+              <p className="text-blue-400 font-bold">CUOTAS</p>
+              <p className="ml-2 text-yellow-500 font-bold"> Tandíl</p>
             </div>
           </Link>
           <MainNav data={categories} />
