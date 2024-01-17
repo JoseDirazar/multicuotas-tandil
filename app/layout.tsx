@@ -1,4 +1,4 @@
-import { Gamja_Flower } from "next/font/google";
+import { Lusitana } from "next/font/google";
 
 import ModalProvider from "@/providers/modal-provider";
 import ToastProvider from "@/providers/toast-provider";
@@ -9,7 +9,7 @@ import ThemeSwitch from "@/components/ui/theme-switch";
 
 import "./globals.css";
 
-const font = Gamja_Flower({ subsets: ["latin"], weight: "400" });
+const font = Lusitana({ subsets: ["latin"], weight: "700" });
 
 export const metadata = {
   title: "MULTICUOTAS Tandil",
