@@ -8,6 +8,7 @@ import useCart from "@/hooks/use-cart";
 import Summary from "./components/summary";
 import CartItem from "./components/cart-item";
 
+
 export const revalidate = 0;
 
 const CartPage = () => {
@@ -23,6 +24,7 @@ const CartPage = () => {
   }
 
   return (
+    
     <div className="bg-white dark:bg-black">
       <Container>
         <div className="px-4 py-16 pt-3 sm:px-6 lg:px-8">
@@ -57,6 +59,7 @@ const CartPage = () => {
         </div>
       </Container>
     </div>
+
   );
 };
 
