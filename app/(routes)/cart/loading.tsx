@@ -1,7 +1,7 @@
 import Skeleton from "@/components/ui/skeleton";
 import Container from "@/components/ui/container";
 
-export default function Loading () {
+const Loading  = () => {
 
   return (
      <Container>
@@ -21,3 +21,5 @@ export default function Loading () {
  
 
 };
+
+export default Loading
