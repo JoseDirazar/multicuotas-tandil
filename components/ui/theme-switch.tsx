@@ -4,13 +4,13 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ShoppingCart } from "lucide-react";
-import { useTheme } from "@/providers/theme-context";
+import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import useCart from "@/hooks/use-cart";
 
 export default function ThemeSwitch() {
   const [isMounted, setIsMounted] = useState(false);
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
 
   useEffect(() => {
     setIsMounted(true);
@@ -40,7 +40,7 @@ export default function ThemeSwitch() {
         href="/cart"
         className="fixed bottom-5 right-5 flex h-[3.5rem] w-[3.5rem] items-center justify-center rounded-full border-[2px] border-black border-opacity-40 bg-black text-white shadow-2xl transition-all sm:hover:scale-[1.15] active:scale-110 dark:bg-white dark:text-black"
       >
-        {theme === "light" ? (
+        {resolvedTheme === "light" ? (
           <ShoppingCart size={23} color="white" />
         ) : (
           <ShoppingCart size={23} color="black" />
