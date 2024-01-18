@@ -33,7 +33,7 @@ export default function RootLayout({
           <ModalProvider />
           <Navbar />
           <div className="absolute right-[11rem] top-[6rem] -z-10 h-[31.25rem] w-[31.25rem] rounded-full bg-[#e4e2fb] blur-[10rem] dark:bg-[#946263] sm:w-[68.75rem]"></div>
-          <div className="absolute left-[-35rem] top-[2rem] -z-10 h-[31.25rem] w-[50rem] rounded-full bg-[#fbd7d7] blur-[10rem] dark:bg-[#636894] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]"></div>
+          <div className="absolute left-[2rem] top-[2rem] -z-10 h-[31.25rem] w-[50rem] rounded-full bg-[#fbd7d7] blur-[10rem] dark:bg-[#636894] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]"></div>
           {children}
           <ThemeSwitch />
           <Footer />
