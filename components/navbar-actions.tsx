@@ -19,7 +19,7 @@ const NavbarActions = () => {
   }
 
   return (
-    <div className="flex items-center gap-x-4 lg:ml-auto">
+    <div className="flex items-center gap-x-4">
       {resolvedTheme === "light" ? (
       <button
         className="flex h-[2.5rem] w-[2.5rem] items-center justify-center rounded-full border-[2px] border-black border-opacity-40 bg-black text-white antialiased shadow-2xl backdrop-blur-[0.5rem] transition-all sm:hover:scale-[1.15] active:scale-110 dark:bg-white"
