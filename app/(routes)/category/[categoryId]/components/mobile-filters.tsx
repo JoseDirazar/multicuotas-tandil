@@ -42,7 +42,11 @@ const MobileFilters: React.FC<MobileFiltersProps> = ({ sizes, colors }) => {
           <Dialog.Panel className=" relative ml-auto flex h-full w-full max-w-xs flex-col overflow-y-auto bg-white py-4 pb-6 shadow-xl dark:bg-neutral-800 ">
             {/* Close button */}
             <div className="flex items-center justify-end px-4">
-              <IconButton icon={<X size={15} />} onClick={onClose} className="dark:text-black"/>
+              <IconButton
+                icon={<X size={15} />}
+                onClick={onClose}
+                className="dark:text-black"
+              />
             </div>
 
             <div className="p-4">

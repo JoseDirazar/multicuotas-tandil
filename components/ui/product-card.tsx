@@ -36,7 +36,7 @@ const ProductCard: React.FC<ProductCard> = ({ data }) => {
   return (
     <div
 
-      className="group h-full cursor-pointer space-y-4 rounded-xl hover:scale-110 transition-transform bg-stone-300 p-3 shadow-[0_25px_25px_rgba(0,0,0,0.25)] dark:bg-stone-900 dark:shadow-[0_25px_25px_rgba(200,200,200,0.15)]"
+      className="group h-full cursor-pointer space-y-4 rounded-xl hover:scale-110 transition-transform bg-stone-300 p-3 shadow-[0_25px_25px_rgba(0,0,0,0.25)] dark:bg-stone-900"
     >
       {/* <div className="h-auto w-auto rounded-xl border-none p-[1px] dark:bg-gradient-to-br dark:from-red-600 dark:via-blue-500 dark:to-yellow-500"> */}
       {/* Image & actions */}

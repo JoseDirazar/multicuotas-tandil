@@ -16,7 +16,7 @@ const Navbar = async () => {
     <div className="border-b bg-white/30 dark:border-neutral-700 dark:bg-black/30">
       <Container>
         <div className="flex h-16 items-center  justify-between px-4 sm:px-6 lg:relative lg:px-8">
-          <MobileMainNav data={categories} />
+            <NavbarActions />
           <Link href="/" className="gap-x-2 lg:ml-0">
             <div
               className={`${font.className} ml-10 flex p-2 px-4 pl-0 text-xl dark:text-white lg:ml-0`}
@@ -27,7 +27,7 @@ const Navbar = async () => {
             </div>
           </Link>
           <MainNav data={categories} />
-          <NavbarActions />
+          <MobileMainNav data={categories} />
         </div>
       </Container>
     </div>

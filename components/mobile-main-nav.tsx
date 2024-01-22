@@ -44,17 +44,17 @@ const MobileMainNav: React.FC<MainNavProps> = ({ data }) => {
       <Dialog
         open={open}
         as="div"
-        className="absolute top-0 z-30 h-[100vh] w-[70%] sm:w-[40%] lg:hidden"
+        className="absolute top-0 right-0 z-30 h-[100vh] w-[70%] sm:w-[40%] lg:hidden"
         onClose={onClose}
       >
         <div className="fixed inset-0 bg-black/10 backdrop-blur-[2px]" />
 
-        <Dialog.Panel className="relative mr-auto flex h-full w-full max-w-[100%] flex-col  overflow-y-auto bg-white/70 py-4 pb-6 shadow-xl backdrop-blur-lg dark:bg-transparent/70">
+        <Dialog.Panel className="relative ml-auto flex h-full w-full max-w-xs flex-col overflow-y-auto bg-white/70 py-4 pb-6 shadow-xl backdrop-blur-lg dark:bg-transparent/70">
           {/* Close button */}
           <div className="flex items-center px-[1.1rem]">
             <IconButton icon={<X size={15} />} onClick={onClose} className="dark:text-black"/>
           </div>
-          <div className="mr-1 flex  h-full max-h-[40vh] flex-col-reverse items-end justify-evenly p-6 sm:mr-3">
+          <div className="mr-1 flex  h-full max-h-[60vh] flex-col-reverse items-end justify-evenly p-6 sm:mr-3">
             {routes.map((route) => (
               <div
                 key={route.href + "mobile"}
