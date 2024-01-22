@@ -49,14 +49,14 @@ const ProductCard: React.FC<ProductCard> = ({ data }) => {
           className="aspect-square rounded-md object-cover"
         />
         <div className="absolute bottom-5 w-full px-6 transition lg:opacity-0 lg:group-hover:opacity-100">
-          <div className="flex justify-center gap-x-6">
+          <div className="hidden justify-center gap-x-6 group-hover:flex">
             <IconButton
               onClick={onPreview}
-              icon={<Expand size={30} className="text-gray-600" />}
+              icon={<Expand size={20} className="text-gray-600" />}
             />
             <IconButton
               onClick={onAddToCart}
-              icon={<ShoppingCart size={30} className="text-gray-600" />}
+              icon={<ShoppingCart size={20} className="text-gray-600" />}
             />
           </div>
         </div>
