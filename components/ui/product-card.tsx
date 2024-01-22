@@ -10,6 +10,7 @@ import IconButton from "@/components/ui/icon-button";
 import usePreviewModal from "@/hooks/use-preview-modal";
 import useCart from "@/hooks/use-cart";
 import { Product } from "@/types";
+import Link from "next/link";
 
 interface ProductCard {
   data: Product;
@@ -19,10 +20,6 @@ const ProductCard: React.FC<ProductCard> = ({ data }) => {
   const previewModal = usePreviewModal();
   const cart = useCart();
   const router = useRouter();
-
-  const handleClick = () => {
-    router.push(`/product/${data?.id}`);
-  };
 
   const onPreview: MouseEventHandler<HTMLButtonElement> = (event) => {
     event.stopPropagation();
@@ -38,8 +35,8 @@ const ProductCard: React.FC<ProductCard> = ({ data }) => {
 
   return (
     <div
-      onClick={handleClick}
-      className="group h-full cursor-pointer space-y-4 rounded-xl bg-neutral-100 p-3 shadow-[0_25px_25px_rgba(0,0,0,0.25)] dark:bg-neutral-950 dark:shadow-[0_25px_25px_rgba(255,255,255,0.15)]"
+
+      className="group h-full cursor-pointer space-y-4 rounded-xl hover:scale-110 transition-transform bg-stone-300 p-3 shadow-[0_25px_25px_rgba(0,0,0,0.25)] dark:bg-stone-900 dark:shadow-[0_25px_25px_rgba(200,200,200,0.15)]"
     >
       {/* <div className="h-auto w-auto rounded-xl border-none p-[1px] dark:bg-gradient-to-br dark:from-red-600 dark:via-blue-500 dark:to-yellow-500"> */}
       {/* Image & actions */}
@@ -65,11 +62,11 @@ const ProductCard: React.FC<ProductCard> = ({ data }) => {
         </div>
       </div>
       {/* Description */}
-      <div>
+      <div className=" group-hover:animate-bounce/100">
+        <Link href={`/product/${data?.id}`} className="text-sm text-gray-500 dark:text-neutral-400 group-hover:font-extrabold group-hover:text-white">
         <p className="text-lg font-semibold dark:text-white">{data.name}</p>
-        <p className="text-sm text-gray-500 dark:text-neutral-400">
           {data.category?.name}
-        </p>
+        </Link>
       </div>
       {/* Price & Reiew */}
       <div className="flex items-center justify-between">

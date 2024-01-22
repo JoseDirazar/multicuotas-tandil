@@ -52,13 +52,13 @@ const MobileMainNav: React.FC<MainNavProps> = ({ data }) => {
         <Dialog.Panel className="relative mr-auto flex h-full w-full max-w-[100%] flex-col overflow-y-auto bg-white/70 py-4 pb-6 shadow-xl backdrop-blur-lg dark:bg-transparent/70">
           {/* Close button */}
           <div className="flex items-center px-[1.1rem]">
-            <IconButton icon={<X size={15} />} onClick={onClose} />
+            <IconButton icon={<X size={15} />} onClick={onClose} className="dark:text-black"/>
           </div>
           <div className="mr-1 flex  h-full max-h-[40vh] flex-col items-end justify-evenly p-6 sm:mr-3">
             {routes.map((route) => (
               <div
                 key={route.href + "mobile"}
-                className="mr-0 flex min-w-[70%] flex-col items-end hover:scale-[1.15] sm:mr-3"
+                className="mr-0 flex min-w-[70%] flex-col items-end hover:scale-[1.15] transition-transform sm:mr-3"
               >
                 <Link
                   href={route.href}
@@ -68,10 +68,11 @@ const MobileMainNav: React.FC<MainNavProps> = ({ data }) => {
                       ? "text-black dark:text-white"
                       : "text-black dark:text-neutral-100",
                   )}
+                  onClick={onClose}
                 >
                   {route.label}
                 </Link>
-                <hr className="mt-9 w-full border-black dark:border-white" />
+                <hr className="mt-2 mb-3 w-full border-black dark:border-white" />
               </div>
             ))}
           </div>

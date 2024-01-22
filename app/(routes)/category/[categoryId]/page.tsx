@@ -63,7 +63,10 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({
         <Billboard data={category.billboard} />
         <div className="px-4 pb-24 sm:px-6 lg:px-8">
           <div className="mt-8 h-full lg:grid lg:grid-cols-5 lg:gap-x-8">
+            <div className="flex flex-row-reverse items-center justify-between">
             <MobileFilters sizes={sizes} colors={colors} />
+            <h2 className="text-3xl font-bold dark:text-neutral-200">{category.name}</h2>
+            </div>
             <div className="hidden lg:block">
               <Filter valueKey="sizeId" name="Producto" data={sizes} />
               <Filter valueKey="colorId" name="Color" data={colors} />
