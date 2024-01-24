@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { MouseEventHandler } from "react";
 import { Expand, ShoppingCart } from "lucide-react";
-import { useRouter } from "next/navigation";
 
 import Currency from "@/components/ui/currency";
 import IconButton from "@/components/ui/icon-button";
@@ -19,7 +18,7 @@ interface ProductCard {
 const ProductCard: React.FC<ProductCard> = ({ data }) => {
   const previewModal = usePreviewModal();
   const cart = useCart();
-  const router = useRouter();
+
 
   const onPreview: MouseEventHandler<HTMLButtonElement> = (event) => {
     event.stopPropagation();
@@ -64,7 +63,7 @@ const ProductCard: React.FC<ProductCard> = ({ data }) => {
       {/* Description */}
       <div className=" group-hover:animate-bounce/100">
         <Link href={`/product/${data?.id}`} className="text-sm text-gray-500 dark:text-neutral-400 group-hover:underline group-hover:text-sky-500">
-        <p className="text-lg font-semibold ">{data.name}</p>
+        <p className="text-lg font-semibold text-black dark:text-white">{data.name}</p>
           {data.category?.name}
         </Link>
       </div>
