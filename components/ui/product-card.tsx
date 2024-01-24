@@ -63,14 +63,15 @@ const ProductCard: React.FC<ProductCard> = ({ data }) => {
       </div>
       {/* Description */}
       <div className=" group-hover:animate-bounce/100">
-        <Link href={`/product/${data?.id}`} className="text-sm text-gray-500 dark:text-neutral-400 group-hover:font-extrabold group-hover:text-white">
-        <p className="text-lg font-semibold dark:text-white">{data.name}</p>
+        <Link href={`/product/${data?.id}`} className="text-sm text-gray-500 dark:text-neutral-400 group-hover:underline group-hover:text-sky-500">
+        <p className="text-lg font-semibold ">{data.name}</p>
           {data.category?.name}
         </Link>
       </div>
       {/* Price & Reiew */}
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col justify-between">
         <Currency value={data?.price} />
+        <p className="mt-2 font-light">{data?.description}</p>
       </div>
     </div>
   );

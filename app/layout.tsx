@@ -7,7 +7,7 @@ import Footer from "@/components/footer";
 import ThemeSwitch from "@/components/ui/theme-switch";
 
 import "./globals.css";
-import { ThemeContextProvider } from "@/providers/theme-provider";
+import ThemeContextProvider from "@/providers/theme-provider";
 
 const font = Lusitana({ subsets: ["latin"], weight: "700" });
 
