@@ -9,9 +9,7 @@ import Button from "@/components/ui/button";
 import { Dialog } from "@headlessui/react";
 import {
   X,
-  Menu,
-  SeparatorVertical,
-  AlignHorizontalJustifyEnd,
+  Menu
 } from "lucide-react";
 import { useState } from "react";
 import IconButton from "@/components/ui/icon-button";
